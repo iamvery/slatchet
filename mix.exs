@@ -19,7 +19,7 @@ defmodule Slatchet.Mixfile do
   def application do
     [mod: {Slatchet, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :faker]]
+                    :phoenix_ecto, :postgrex, :faker, :timex]]
   end
 
   # Specifies which paths to compile per environment.
@@ -39,6 +39,7 @@ defmodule Slatchet.Mixfile do
      {:gettext, "~> 0.11"},
      {:phoenix_ratchet, "~> 0.2"},
      {:faker, "~> 0.6"},
+     {:timex, "~> 3.0"},
      {:cowboy, "~> 1.0"}]
   end
 
