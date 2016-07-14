@@ -1,10 +1,21 @@
 defmodule Slatchet.PageController do
   use Slatchet.Web, :controller
 
+  plug :channels_data
   plug :channel_data
 
   def index(conn, _params) do
     render conn, "index.html"
+  end
+
+  defp channels_data(conn, _opts) do
+    merge_data conn, %{
+      channels: [
+        %{name: "lolwat"},
+        %{name: "ohai"},
+        %{name: "noice"},
+      ],
+    }
   end
 
   defp channel_data(conn, _opts) do
