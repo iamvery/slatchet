@@ -3,6 +3,7 @@ defmodule Slatchet.PageController do
 
   plug :channels_data
   plug :channel_data
+  plug :messages_data
 
   def index(conn, _params) do
     render conn, "index.html"
@@ -21,6 +22,16 @@ defmodule Slatchet.PageController do
   defp channel_data(conn, _opts) do
     merge_data conn, %{
       channel: %{name: "ohai"},
+    }
+  end
+
+  defp messages_data(conn, _opts) do
+    merge_data conn, %{
+      messages: [
+        %{person: "Jay", body: "Hi! How is everyone?"},
+        %{person: "Les", body: "Very well! Also, I love you ;)"},
+        %{person: "Jay", body: "Why is your picture me? xD"},
+      ],
     }
   end
 
