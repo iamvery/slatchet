@@ -12,8 +12,6 @@ config :logger, level: :warn
 # Configure your database
 config :slatchet, Slatchet.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
   database: "slatchet_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
