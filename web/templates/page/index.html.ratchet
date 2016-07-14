@@ -16,11 +16,11 @@
 </div>
 
 <div class="message-history">
-  <div class="message">
+  <div class="message" data-prop="messages">
     <a href="#" class="message_profile-pic"></a>
-    <a href="#" class="message_username">Jay</a>
+    <a data-prop="person" href="#" class="message_username">Jay</a>
     <span class="message_timestamp">1:31 AM</span>
     <span class="message_edit"><a href="#">Edit</a></span>
-    <span class="message_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem molestias incidunt officia animi ducimus nostrum a cum, sunt, minima fugit repellendus assumenda expedita. Eaque autem vero delectus, optio, consequuntur suscipit.</span>
+    <span data-prop="body" class="message_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem molestias incidunt officia animi ducimus nostrum a cum, sunt, minima fugit repellendus assumenda expedita. Eaque autem vero delectus, optio, consequuntur suscipit.</span>
   </div>
 </div>
