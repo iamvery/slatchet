@@ -34,7 +34,7 @@ defmodule Slatchet.PageController do
 
   defp your_data(conn, _opts) do
     merge_data conn, %{
-      you: %{name: "Jay"},
+      you: %{name: get_session(conn, :you)},
     }
   end
 
