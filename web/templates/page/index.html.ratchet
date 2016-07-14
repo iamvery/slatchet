@@ -4,7 +4,7 @@
     <ul class="channel_list">
       <li class="channel" data-prop="channels">
         <a class="channel_name">
-          <span class="unread">0</span>
+          <span data-prop="message_count"class="unread">0</span>
           <span>
             <span class="prefix">#</span>
             <span data-prop="name">general</span>

@@ -12,9 +12,9 @@ defmodule Slatchet.PageController do
   defp channels_data(conn, _opts) do
     merge_data conn, %{
       channels: [
-        %{name: "lolwat"},
-        %{name: "ohai"},
-        %{name: "noice"},
+        %{name: "lolwat", message_count: "42"},
+        %{name: "ohai", message_count: "3"},
+        %{name: "noice", message_count: "10,437"},
       ],
     }
   end
