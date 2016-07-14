@@ -19,3 +19,13 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+// mark active channel
+let activeChannel = document.querySelector('#active-channel').innerText;
+let channels = document.querySelectorAll('.channel');
+channels.forEach(channel => {
+  let name = channel.querySelector('[data-prop=name]').innerText;
+  if (name == activeChannel) {
+    channel.attributes.class.value = `${channel.attributes.class.value} active`;
+  }
+});
