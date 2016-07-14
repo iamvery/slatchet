@@ -2,7 +2,7 @@
   <div class="listings_channels">
     <h2 class="listings_header">Channels</h2>
     <ul class="channel_list">
-      <li class="channel active ">
+      <li class="channel">
         <a class="channel_name">
           <span class="unread">0</span>
           <span>
