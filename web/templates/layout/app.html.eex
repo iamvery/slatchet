@@ -3,10 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Slatchet!</title>
 
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
   <body>
+    <div class="header">
+      <div class="team-menu">Slatchet</div>
+      <div class="channel-menu">
+        <span class="channel-menu_name">
+          <span class="channel-menu_prefix">#</span>
+          general
+        </span>
+      </div>
+    </div>
+
+    <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+    <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+
+    <div class="main">
+      <%= render @view_module, @view_template, assigns %>
+    </div>
+
+    <div class="footer">
+      <div class="user-menu">
+        <span class="user-menu_profile-pic">&nbsp;</span>
+        <span class="user-menu_username">Jay</span>
+        <span class="connection_status">online</span>
+      </div>
+      <div class="input-box">
+        <form action="#">
+          <input type="text" class="input-box_text">
+        </form>
+      </div>
+    </div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
