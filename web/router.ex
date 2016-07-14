@@ -16,6 +16,7 @@ defmodule Slatchet.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :have_a_name
     plug Ratchet.Data.Plug
   end
 
@@ -33,4 +34,12 @@ defmodule Slatchet.Router do
   # scope "/api", Slatchet do
   #   pipe_through :api
   # end
+
+  def have_a_name(conn, _opts) do
+    if get_session(conn, :you) do
+      conn
+    else
+      put_session(conn, :you, Faker.Name.first_name)
+    end
+  end
 end
