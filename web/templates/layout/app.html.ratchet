@@ -11,9 +11,9 @@
     <div class="header">
       <div class="team-menu">Slatchet</div>
       <div class="channel-menu">
-        <span class="channel-menu_name">
+        <span class="channel-menu_name" data-prop="channel">
           <span class="channel-menu_prefix">#</span>
-          general
+          <span id="active-channel" data-prop="name">general</span>
         </span>
       </div>
     </div>
