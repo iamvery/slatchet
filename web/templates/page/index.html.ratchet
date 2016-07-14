@@ -2,12 +2,12 @@
   <div class="listings_channels">
     <h2 class="listings_header">Channels</h2>
     <ul class="channel_list">
-      <li class="channel">
+      <li class="channel" data-prop="channels">
         <a class="channel_name">
           <span class="unread">0</span>
           <span>
             <span class="prefix">#</span>
-            general
+            <span data-prop="name">general</span>
           </span>
         </a>
       </li>
