@@ -26,9 +26,9 @@
     </div>
 
     <div class="footer">
-      <div class="user-menu">
+      <div class="user-menu" data-prop="you">
         <span class="user-menu_profile-pic">&nbsp;</span>
-        <span class="user-menu_username">Jay</span>
+        <span class="user-menu_username" data-prop="name">Jay</span>
         <span class="connection_status">online</span>
       </div>
       <div class="input-box">
