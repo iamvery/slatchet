@@ -28,11 +28,7 @@ defmodule Slatchet.PageController do
 
   defp messages_data(conn, _opts) do
     merge_data conn, %{
-      messages: [
-        %{person: "Jay", body: "Hi! How is everyone?"},
-        %{person: "Les", body: "Very well! Also, I love you ;)"},
-        %{person: "Jay", body: "Why is your picture me? xD"},
-      ],
+      messages: Message.all,
     }
   end
 
