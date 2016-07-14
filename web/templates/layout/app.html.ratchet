@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Slatchet!</title>
 
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, ~s(/css/app.css)) %>">
   </head>
   <body>
     <div class="header">
@@ -37,6 +37,6 @@
         </form>
       </div>
     </div>
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= static_path(@conn, ~s(/js/app.js)) %>"></script>
   </body>
 </html>
