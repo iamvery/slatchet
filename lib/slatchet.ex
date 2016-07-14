@@ -14,6 +14,7 @@ defmodule Slatchet do
       supervisor(Slatchet.Endpoint, []),
       # Start your own worker by calling: Slatchet.Worker.start_link(arg1, arg2, arg3)
       # worker(Slatchet.Worker, [arg1, arg2, arg3]),
+      worker(Message, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
