@@ -14,7 +14,7 @@ defmodule Slatchet.PageController do
     merge_data conn, %{
       channels: [
         %{name: "lolwat", message_count: "42"},
-        %{name: "ohai", message_count: "3"},
+        %{name: "ohai", message_count: inspect(Message.count)},
         %{name: "noice", message_count: "10,437"},
       ],
     }
