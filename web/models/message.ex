@@ -9,7 +9,8 @@ defmodule Message do
 
   def count, do: length(all)
 
-  def add(message) do
+  def add(person, body) do
+    message = %{person: person, body: body}
     Agent.update(__MODULE__, fn {count, messages} -> {count+1, [message|messages]} end)
   end
 end

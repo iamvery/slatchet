@@ -27,6 +27,7 @@ defmodule Slatchet.Router do
   scope "/", Slatchet do
     pipe_through :browser # Use the default browser stack
 
+    resources "/messages", MessageController, only: [:create]
     get "/", PageController, :index
   end
 
