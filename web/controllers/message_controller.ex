@@ -3,6 +3,6 @@ defmodule Slatchet.MessageController do
 
   def create(conn, %{"channel_id" => channel, "message" => message_params}) do
     Message.add(channel, get_session(conn, :you), message_params["body"])
-    redirect conn, to: "/"
+    redirect conn, to: channel_path(conn, :show, channel)
   end
 end
