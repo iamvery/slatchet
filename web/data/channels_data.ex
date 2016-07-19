@@ -1,11 +1,13 @@
 defmodule ChannelsData do
   use Ratchet.Plug.Data, for: :channels
 
-  def data(_conn) do
-    [
-      %{name: "lolwat", message_count: "42"},
-      %{name: "ohai", message_count: inspect(Message.count)},
-      %{name: "noice", message_count: "10,437"},
-    ]
+  @channels ["lolwat", "ohai", "noice"]
+
+  def data(conn) do
+    Enum.map(@channels, &channel_data(conn, &1))
+  end
+
+  defp channel_data(conn, name) do
+    %{name: name, message_count: Message.count |> inspect}
   end
 end
