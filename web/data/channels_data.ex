@@ -8,6 +8,11 @@ defmodule ChannelsData do
   end
 
   defp channel_data(conn, name) do
-    %{name: name, message_count: Message.count |> inspect}
+    %{
+      link: {
+        %{name: name, message_count: Message.for(name) |> length |> inspect},
+        href: Slatchet.Router.Helpers.channel_path(conn, :show, name),
+      }
+    }
   end
 end

@@ -3,7 +3,7 @@
     <h2 class="listings_header">Channels</h2>
     <ul class="channel_list">
       <li class="channel" data-prop="channels">
-        <a class="channel_name">
+        <a data-prop="link" class="channel_name" href="#">
           <span data-prop="message_count" class="unread">0</span>
           <span>
             <span class="prefix">#</span>
