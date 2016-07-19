@@ -4,6 +4,7 @@ defmodule Slatchet.ChannelController do
   plug YourData
   plug ChannelData
   plug ChannelsData
+  plug MessagesData
 
   def show(conn, _params) do
     render conn, "show.html"

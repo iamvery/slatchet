@@ -7,6 +7,10 @@ defmodule Message do
     Agent.get(__MODULE__, fn {_count, messages} -> messages end)
   end
 
+  def for(channel) do
+    Enum.filter(all, fn %{channel: msg_channel} -> msg_channel == channel end)
+  end
+
   def count, do: length(all)
 
   def add(channel, person, body) do
