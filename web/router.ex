@@ -20,7 +20,6 @@ defmodule Slatchet.Router do
 
     resources "/channels", ChannelController, only: [:show]
     resources "/messages", MessageController, only: [:create]
-    get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
