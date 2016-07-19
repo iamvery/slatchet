@@ -18,8 +18,9 @@ defmodule Slatchet.Router do
   scope "/", Slatchet do
     pipe_through :browser # Use the default browser stack
 
-    resources "/channels", ChannelController, only: [:show]
-    resources "/messages", MessageController, only: [:create]
+    resources "/channels", ChannelController, only: [:show] do
+      resources "/messages", MessageController, only: [:create]
+    end
   end
 
   # Other scopes may use custom stacks.
