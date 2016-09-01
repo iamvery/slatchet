@@ -1,5 +1,6 @@
 defmodule Slatchet.Endpoint do
   use Phoenix.Endpoint, otp_app: :slatchet
+  use Ratchet.Endpoint
 
   socket "/socket", Slatchet.UserSocket
 
