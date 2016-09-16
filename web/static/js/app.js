@@ -23,7 +23,7 @@ import "phoenix_html"
 // mark active channel
 let activeChannel = document.querySelector('#active-channel').innerText;
 let channels = document.querySelectorAll('.channel');
-channels.forEach(channel => {
+Array.prototype.forEach.call(channels, channel => {
   let name = channel.querySelector('[data-prop=name]').innerText;
   if (name == activeChannel) {
     channel.attributes.class.value = `${channel.attributes.class.value} active`;
