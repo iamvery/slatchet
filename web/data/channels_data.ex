@@ -1,5 +1,5 @@
 defmodule ChannelsData do
-  use Data, for: :channels
+  use Ratchet.Plug.Data, for: :channels
 
   def data(_conn) do
     [

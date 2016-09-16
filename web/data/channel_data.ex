@@ -1,4 +1,4 @@
 defmodule ChannelData do
-  use Data, for: :channel
+  use Ratchet.Plug.Data, for: :channel
   def data(_conn), do: %{name: "ohai"}
 end
